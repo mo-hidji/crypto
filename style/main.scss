@@ -13,6 +13,7 @@ body,
 .partners {
     padding: 4%;
     display: flex;
+    z-index: 2000;
 
     .partner {
         justify-content: center;
@@ -42,6 +43,8 @@ body,
     align-items: center;
     padding: 4%;
     position: relative;
+    @extend %bg-position;
+    background-image: url('/assets/bg.jpg');
 
     /** overlay **/ 
     &::after {
