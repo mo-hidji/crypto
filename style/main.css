@@ -520,4 +520,10 @@ body,
   padding: 0 30%;
   text-align: center;
 }
+
+@media (max-width: 790px) {
+  .services p {
+    padding: 4%;
+  }
+}
 /*# sourceMappingURL=main.css.map */
