@@ -13,7 +13,6 @@ body,
 .partners {
     padding: 4%;
     display: flex;
-    z-index: 2;
 
     .partner {
         justify-content: center;
@@ -27,6 +26,7 @@ body,
             height: auto;
             filter: grayscale(100%);
             @extend %transition;
+            z-index: 1;
 
             &:hover {
                 filter: none;

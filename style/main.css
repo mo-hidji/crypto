@@ -315,7 +315,7 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 1000;
+  z-index: 2000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -455,7 +455,6 @@ body,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  z-index: 800;
 }
 
 .partners .partner {
@@ -475,6 +474,7 @@ body,
   height: auto;
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
+  z-index: 1;
 }
 
 .partners .partner img:hover {
