@@ -1,13 +1,35 @@
 @import 'variables', 'header', 'utilities', 'mobileMenu';
 
-/**** reset ****/ 
-html, body, * {
+/**** reset ****/
+html,
+body,
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
 /** test **/
-.test {
-    padding: 2%;
+.partners {
+    padding: 4%;
+    display: flex;
+
+    .partner {
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        margin: 0 10px;
+
+        img {
+            width: 100%;
+            max-width: 100px;
+            height: auto;
+            filter: grayscale(100%);
+            @extend %transition;
+            
+            &:hover {
+                filter: none;
+            }
+        }
+    }
 }

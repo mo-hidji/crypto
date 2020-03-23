@@ -5,7 +5,7 @@
 /*** hero ***/
 .main-hero {
   height: 120vh;
-  background-image: url("https://images.unsplash.com/photo-1567826722186-9ecdf689f122?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80");
+  background-image: url("https://images.unsplash.com/photo-1509718443690-d8e2fb3474b7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80");
   position: relative;
   /*** contact ***/
   /*** main navigation ***/
@@ -26,13 +26,15 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 30px 4%;
+  padding: 30px 0;
+  margin: 0 4%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
   /** change view on small screens **/
   /** address **/
   /** contact links **/
 }
 
-@media only screen and (max-width: 678px) {
+@media only screen and (max-width: 688px) {
   .main-hero .contact {
     display: none;
   }
@@ -71,6 +73,8 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: cubic-bezier(1, 0, 2, 1);
+  transition: cubic-bezier(1, 0, 2, 1);
   /** change view on small screens **/
   /** brand **/
   /** menu **/
@@ -276,7 +280,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.main-hero .navbar, .cta, .btn, .btn-secondary {
+.cta, .btn, .btn-secondary, .partners .partner img {
   -webkit-transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
   transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
   cursor: pointer;
@@ -379,6 +383,8 @@ h1, h2, h3, h4, h5, h6 {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
+  -webkit-transition: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: cubic-bezier(0.68, -0.55, 0.265, 1.55);
   /** hide on smaller devices **/
   /** hide on smaller devices **/
   /** brand **/
@@ -418,7 +424,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /**** reset ****/
-html, body, * {
+html,
+body,
+* {
   padding: 0;
   margin: 0;
   -webkit-box-sizing: border-box;
@@ -426,7 +434,34 @@ html, body, * {
 }
 
 /** test **/
-.test {
-  padding: 2%;
+.partners {
+  padding: 4%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.partners .partner {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 10px;
+}
+
+.partners .partner img {
+  width: 100%;
+  max-width: 100px;
+  height: auto;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+.partners .partner img:hover {
+  -webkit-filter: none;
+          filter: none;
 }
 /*# sourceMappingURL=main.css.map */
