@@ -35,7 +35,7 @@
 
 <body>
     <!-- main hero container -->
-    <div class="main-hero" id="hero">
+    <div class="main-hero" id="hero"  data-parallax="scroll" data-image-src="assets/bg2.jpg">
         <!-- contact info -->
         <div class="contact">
             <div class="address">
@@ -149,11 +149,28 @@
         </div>
     </div>
 
+    <!-- my services -->
+    <div class="services"  data-parallax="scroll" data-image-src="assets/bg.jpg">
+        <div class="tag">
+            <h4>About me</h4>
+        </div>
+        <h1>My services</h1>
+        <p>The optimum ratio of price and quality responsible
+            and conscientious approach</p>
+    </div>
+
+
+
+
 
     <!--scripts-->
     <script>
         AOS.init();
     </script>
+    
+    <!--parallax-->
+    <script src="js/parallax.js-1.5.0/parallax.min.js"></script>
+
     <!--js-->
     <script src="js/main.js"></script>
 </body>

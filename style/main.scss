@@ -9,7 +9,7 @@ body,
     box-sizing: border-box;
 }
 
-/** test **/
+/** partners slider **/
 .partners {
     padding: 4%;
     display: flex;
@@ -22,14 +22,42 @@ body,
 
         img {
             width: 100%;
-            max-width: 100px;
+            max-width: 110px;
             height: auto;
             filter: grayscale(100%);
             @extend %transition;
-            
+
             &:hover {
                 filter: none;
             }
         }
+    }
+}
+
+/** services **/ 
+.services {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4%;
+    position: relative;
+
+    /** overlay **/ 
+    &::after {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: $dark;
+        z-index: -1;
+        opacity: .3;
+    }
+
+    p {
+        padding: 0 30%;
+        text-align: center;
     }
 }

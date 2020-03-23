@@ -29,6 +29,8 @@ function openMenu() {
     document.getElementById('mobile').style.transform= "translateX(0%)";
 };
 
+// slider
+
 $(function() {
     
 $('.partners').slick({
@@ -38,6 +40,7 @@ $('.partners').slick({
     infinite: true,
     autoplay: true,
     arrows: false,
+    pauseOnFocus: false,
     autoplaySpeed: 1000
 });
 })

@@ -110,11 +110,21 @@ p {
         }
     }
 
-    /** hamburger **/ 
+    /** hamburger **/
     .toggler {
         .toggle {
             color: $dark !important;
         }
+    }
+}
+
+/** tag **/
+
+.tag {
+    h4 {
+        background-color: $main;
+        padding: 5px 15px;
+        border-radius: 60px;
     }
 }
 
