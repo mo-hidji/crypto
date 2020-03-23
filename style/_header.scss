@@ -1,0 +1,114 @@
+/*** hero ***/
+.main-hero {
+    height: 120vh;
+    background-image: url('https://images.unsplash.com/photo-1567826722186-9ecdf689f122?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80');
+    @extend %bg-position;
+    position: relative;
+
+    /*** contact ***/
+    .contact {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 4%;
+
+        /** change view on small screens **/
+        @media only screen and (max-width: 678px) {
+            display: none;
+        }
+
+        /** address **/
+        .address {
+            display: flex;
+            color: $light;
+
+            div {
+                margin-right: 20px;
+            }
+        }
+
+        /** contact links **/
+        .contact-links {
+            a {
+                margin-left: 10px;
+                font-size: 1.5rem;
+                line-height: .2;
+            }
+        }
+    }
+
+    /*** main navigation ***/
+    .navbar {
+        padding: 20px 4%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        @extend %transition;
+
+        /** change view on small screens **/
+        @media only screen and (max-width: $menu) {
+            display: none;
+        }
+
+        /** brand **/
+        .brand {
+            font-size: 3rem;
+
+            span {
+                color: $main;
+            }
+        }
+
+        /** menu **/
+        .menu {
+            a {
+                margin-left: 15px;
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    /*** hero content ***/
+    .hero-content {
+        position: absolute;
+        top: 60%;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 0 4%;
+
+        /** change view on small screens **/
+        @media only screen and (max-width: $mobile) {
+            top: 50%;
+        }
+
+        .tag {
+            h4 {
+                background-color: $main;
+                padding: 5px 15px;
+                border-radius: 60px;
+            }
+        }
+
+
+        .p {
+            padding-right: 600px;
+
+            /** change view on small screens **/
+            @media only screen and (max-width: 1000px) {
+                padding-right: 0;
+            }
+        }
+
+        .cta {
+            margin-right: 30px;
+        }
+    }
+}
+
+/*** nd-menu ***/

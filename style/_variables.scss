@@ -1,0 +1,21 @@
+/*** colors ***/ 
+
+$light: #fff;
+$dark: #160f30;
+$main: #323edd;
+$lightGray: #eeeeee;
+
+
+/*** FONTS ***/ 
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Oswald&display=swap');
+
+$mainFont: 'Oswald', sans-serif;
+$font: 'Montserrat', sans-serif;
+
+/*** breakpoints ***/ 
+
+$tablet: 790px;
+$mobile: 480px;
+$smallMobile: 360px;
+$menu: 993px;

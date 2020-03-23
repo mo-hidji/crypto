@@ -1,0 +1,157 @@
+/*** a links ***/
+a {
+    color: $light;
+    text-decoration: none;
+    font-family: $font;
+    font-weight: normal;
+    transition: .3s;
+
+    &:hover {
+        color: $main;
+    }
+}
+
+/*** Buttons and CTA ***/
+
+.cta {
+    @extend %extendBtn;
+    background-color: $main;
+    color: $light;
+    border: none;
+}
+
+.btn {
+    @extend %extendBtn;
+    border: none;
+}
+
+.btn-secondary {
+    @extend %extendBtn;
+    border: 2px solid $light;
+    background-color: transparent;
+    color: $light;
+    padding: 9px 34px !important;
+
+    &:hover {
+        background-color: $main;
+        border: 2px solid $main;
+    }
+}
+
+h1 {
+    @extend %h-tag;
+}
+
+h2 {
+    @extend %h-tag;
+    font-size: 2rem !important;
+}
+
+h3 {
+    @extend %h-tag;
+    font-size: 1.5rem !important;
+}
+
+h4 {
+    @extend %h-tag;
+    font-size: 1rem !important;
+}
+
+h5 {
+    @extend %h-tag;
+    font-size: .8rem !important;
+}
+
+h6 {
+    @extend %h-tag;
+    font-size: .7rem !important;
+}
+
+p {
+    color: $light;
+    font-family: $font;
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+/*** fixed navbar ***/
+.fixed {
+    position: fixed;
+    top: 0;
+    background-color: $light;
+    padding: 10px 4% !important;
+    z-index: 999;
+
+
+    /** brand **/
+    .brand {
+        font-size: 2rem !important;
+        color: $dark;
+
+        span {
+            color: $main;
+        }
+
+        &:hover {
+            color: $main;
+        }
+    }
+
+    /** menu **/
+    .menu {
+        a {
+            margin-left: 15px;
+            font-size: 1.2rem;
+            color: $dark;
+
+            &:hover {
+                color: $main;
+            }
+        }
+    }
+
+    /** hamburger **/ 
+    .toggler {
+        .toggle {
+            color: $dark !important;
+        }
+    }
+}
+
+
+/** h tags **/
+%h-tag {
+    color: $light;
+    font-family: $mainFont;
+    font-size: 3rem;
+}
+
+/** extended classes **/
+%extendBtn {
+    padding: 10px 35px;
+    font-size: 2rem;
+    font-family: $font;
+    text-transform: uppercase;
+    border-radius: 6px;
+    @extend %transition;
+    margin-top: 10px;
+
+    &:hover {
+        opacity: .9;
+    }
+
+    @media(max-width: $tablet) {
+        font-size: 1.2rem !important;
+        margin-top: 20px;
+    }
+}
+
+%transition {
+    transition: .2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    cursor: pointer;
+}
+
+%bg-position {
+    background-position: center;
+    background-size: cover;
+}

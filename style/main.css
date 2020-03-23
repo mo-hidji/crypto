@@ -1,1 +1,432 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+/*** colors ***/
+/*** FONTS ***/
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Oswald&display=swap");
+/*** breakpoints ***/
+/*** hero ***/
+.main-hero {
+  height: 120vh;
+  background-image: url("https://images.unsplash.com/photo-1567826722186-9ecdf689f122?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80");
+  position: relative;
+  /*** contact ***/
+  /*** main navigation ***/
+  /*** hero content ***/
+}
+
+.main-hero .contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px 4%;
+  /** change view on small screens **/
+  /** address **/
+  /** contact links **/
+}
+
+@media only screen and (max-width: 678px) {
+  .main-hero .contact {
+    display: none;
+  }
+}
+
+.main-hero .contact .address {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #fff;
+}
+
+.main-hero .contact .address div {
+  margin-right: 20px;
+}
+
+.main-hero .contact .contact-links a {
+  margin-left: 10px;
+  font-size: 1.5rem;
+  line-height: .2;
+}
+
+.main-hero .navbar {
+  padding: 20px 4%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /** change view on small screens **/
+  /** brand **/
+  /** menu **/
+}
+
+@media only screen and (max-width: 993px) {
+  .main-hero .navbar {
+    display: none;
+  }
+}
+
+.main-hero .navbar .brand {
+  font-size: 3rem;
+}
+
+.main-hero .navbar .brand span {
+  color: #323edd;
+}
+
+.main-hero .navbar .menu a {
+  margin-left: 15px;
+  font-size: 1.2rem;
+}
+
+.main-hero .hero-content {
+  position: absolute;
+  top: 60%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 4%;
+  /** change view on small screens **/
+}
+
+@media only screen and (max-width: 480px) {
+  .main-hero .hero-content {
+    top: 50%;
+  }
+}
+
+.main-hero .hero-content .tag h4 {
+  background-color: #323edd;
+  padding: 5px 15px;
+  border-radius: 60px;
+}
+
+.main-hero .hero-content .p {
+  padding-right: 600px;
+  /** change view on small screens **/
+}
+
+@media only screen and (max-width: 1000px) {
+  .main-hero .hero-content .p {
+    padding-right: 0;
+  }
+}
+
+.main-hero .hero-content .cta {
+  margin-right: 30px;
+}
+
+/*** nd-menu ***/
+/*** a links ***/
+a {
+  color: #fff;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+a:hover {
+  color: #323edd;
+}
+
+/*** Buttons and CTA ***/
+.cta {
+  background-color: #323edd;
+  color: #fff;
+  border: none;
+}
+
+.btn {
+  border: none;
+}
+
+.btn-secondary {
+  border: 2px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  padding: 9px 34px !important;
+}
+
+.btn-secondary:hover {
+  background-color: #323edd;
+  border: 2px solid #323edd;
+}
+
+h2 {
+  font-size: 2rem !important;
+}
+
+h3 {
+  font-size: 1.5rem !important;
+}
+
+h4 {
+  font-size: 1rem !important;
+}
+
+h5 {
+  font-size: .8rem !important;
+}
+
+h6 {
+  font-size: .7rem !important;
+}
+
+p {
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+/*** fixed navbar ***/
+.fixed {
+  position: fixed;
+  top: 0;
+  background-color: #fff;
+  padding: 10px 4% !important;
+  z-index: 999;
+  /** brand **/
+  /** menu **/
+  /** hamburger **/
+}
+
+.fixed .brand {
+  font-size: 2rem !important;
+  color: #160f30;
+}
+
+.fixed .brand span {
+  color: #323edd;
+}
+
+.fixed .brand:hover {
+  color: #323edd;
+}
+
+.fixed .menu a {
+  margin-left: 15px;
+  font-size: 1.2rem;
+  color: #160f30;
+}
+
+.fixed .menu a:hover {
+  color: #323edd;
+}
+
+.fixed .toggler .toggle {
+  color: #160f30 !important;
+}
+
+/** h tags **/
+h1, h2, h3, h4, h5, h6 {
+  color: #fff;
+  font-family: "Oswald", sans-serif;
+  font-size: 3rem;
+}
+
+/** extended classes **/
+.cta, .btn, .btn-secondary {
+  padding: 10px 35px;
+  font-size: 2rem;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+.cta:hover, .btn:hover, .btn-secondary:hover {
+  opacity: .9;
+}
+
+@media (max-width: 790px) {
+  .cta, .btn, .btn-secondary {
+    font-size: 1.2rem !important;
+    margin-top: 20px;
+  }
+}
+
+.main-hero .navbar, .cta, .btn, .btn-secondary {
+  -webkit-transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  cursor: pointer;
+}
+
+.main-hero {
+  background-position: center;
+  background-size: cover;
+}
+
+.mobile-menu {
+  height: 100vh;
+  background-color: #160f30;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  /*** close btn ****/
+  /*** brand ***/
+  /*** menu ***/
+}
+
+.mobile-menu .close {
+  font-size: 3rem !important;
+  line-height: .55 !important;
+  text-align: center;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.mobile-menu .close:hover, .mobile-menu .close:focus {
+  background-color: red;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  color: #fff;
+}
+
+.mobile-menu .brand-m {
+  text-align: center;
+  width: 100%;
+  font-size: 2.2rem;
+}
+
+.mobile-menu .brand-m span {
+  color: #323edd;
+}
+
+.mobile-menu .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 4%;
+}
+
+.mobile-menu .menu a {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+}
+
+.mobile-header {
+  padding: 2% 4%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  /** hide on smaller devices **/
+  /** hide on smaller devices **/
+  /** brand **/
+  /** hamburger **/
+}
+
+@media only screen and (min-width: 790px) {
+  .mobile-header {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 993px) {
+  .mobile-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.mobile-header .brand {
+  font-size: 2.5rem;
+}
+
+.mobile-header .brand span {
+  color: #323edd;
+}
+
+.mobile-header .toggler .toggle {
+  line-height: .1 !important;
+  padding: 5px;
+  font-size: 1.4rem;
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/**** reset ****/
+html, body, * {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/** test **/
+.test {
+  padding: 2%;
+}
+/*# sourceMappingURL=main.css.map */
