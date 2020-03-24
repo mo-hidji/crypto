@@ -1087,6 +1087,7 @@ body,
   font-family: "Montserrat", sans-serif;
   font-size: 1.1rem;
   padding: 10px;
+  margin-bottom: 20px;
 }
 
 .pricing .price-container .package .add-to-cart button {
