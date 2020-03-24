@@ -347,11 +347,11 @@ body,
 
         /** sides **/
         .side1 {
-            margin-bottom: 20px;
+            margin-right: 20px;
 
             /** change view **/
             @media only screen and (max-width: 1026px) {
-                margin-bottom: 0;
+                margin-right: 0;
             }
         }
 
