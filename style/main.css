@@ -285,6 +285,8 @@ li.slick-active button {
   background-color: #fff;
   padding: 10px 4% !important;
   z-index: 999;
+  -webkit-box-shadow: 0 0px 1.4px rgba(0, 0, 0, 0.02), 0 0px 3.4px rgba(0, 0, 0, 0.028), 0 0px 6.4px rgba(0, 0, 0, 0.035), 0 0px 11.4px rgba(0, 0, 0, 0.042), 0 0px 21.3px rgba(0, 0, 0, 0.05), 0 0px 51px rgba(0, 0, 0, 0.07);
+          box-shadow: 0 0px 1.4px rgba(0, 0, 0, 0.02), 0 0px 3.4px rgba(0, 0, 0, 0.028), 0 0px 6.4px rgba(0, 0, 0, 0.035), 0 0px 11.4px rgba(0, 0, 0, 0.042), 0 0px 21.3px rgba(0, 0, 0, 0.05), 0 0px 51px rgba(0, 0, 0, 0.07);
   /** brand **/
   /** menu **/
   /** hamburger **/
@@ -369,13 +371,13 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.cta, .btn, .btn-secondary, .partners .partner img, .our-services .services-container .service:hover h3, .our-services .services-container .service::before {
+.cta, .btn, .btn-secondary, .partners .partner img, .our-services .services-container .service:hover h3, .our-services .services-container .service::before, .pricing .price-container .package, .contact .contact-container .input {
   -webkit-transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
   transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
   cursor: pointer;
 }
 
-.main-hero, .services, .projects .title, .projects .project-container .side .project {
+.main-hero, .services, .projects .title, .projects .project-container .side .project, .pricing .title, .contact .title {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -745,7 +747,7 @@ body,
   position: absolute;
   bottom: -50%;
   left: 0;
-  right: 0;
+  bottom: 0;
   width: 100%;
   z-index: 3;
   color: #160f30;
@@ -791,7 +793,7 @@ body,
 
 .wecan .sliders .slider {
   margin-bottom: 20px;
-  margin-right: 10px;
+  margin-bottom: 10px;
   margin-left: 10px;
   width: 33%;
   text-align: center;
@@ -941,13 +943,13 @@ body,
 }
 
 .projects .project-container .side1 {
-  margin-right: 20px;
+  margin-bottom: 20px;
   /** change view **/
 }
 
 @media only screen and (max-width: 1026px) {
   .projects .project-container .side1 {
-    margin-right: 0;
+    margin-bottom: 0;
   }
 }
 
@@ -971,5 +973,277 @@ body,
   .projects .project-container .side4 {
     margin-left: 0;
   }
+}
+
+/** pricing **/
+.pricing {
+  /** title **/
+}
+
+.pricing .title {
+  padding: 8%;
+  text-align: center;
+  background-image: url("https://images.unsplash.com/photo-1562944778-b316d1b16aab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=889&q=80");
+}
+
+.pricing .price-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 4%;
+  /** change order on mobile **/
+  /** packages **/
+  /*** basic ***/
+  /*** pro ***/
+  /*** premium ***/
+}
+
+@media only screen and (max-width: 790px) {
+  .pricing .price-container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.pricing .price-container .package {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding: 4%;
+  margin: 10px;
+  border-radius: 10px;
+  position: relative;
+  /** price tag **/
+  /** pack **/
+  /** features **/
+  /** add to cart **/
+}
+
+.pricing .price-container .package:hover {
+  -webkit-transform: scale(1.08);
+          transform: scale(1.08);
+}
+
+.pricing .price-container .package .price {
+  background-color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.pricing .price-container .package .price h1,
+.pricing .price-container .package .price h6 {
+  color: #160f30;
+}
+
+.pricing .price-container .package .pack-name h1 {
+  text-transform: uppercase;
+}
+
+.pricing .price-container .package .features ul {
+  list-style-type: circle;
+}
+
+.pricing .price-container .package .features ul li {
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1rem;
+  padding: 10px;
+}
+
+.pricing .price-container .package .add-to-cart button {
+  font-size: 1.34rem;
+  width: 100%;
+}
+
+.pricing .price-container .basic {
+  background: #2e3192;
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(1%, #2e3192), to(#1bffff));
+  background: linear-gradient(to right bottom, #2e3192 1%, #1bffff 100%);
+}
+
+.pricing .price-container .pro {
+  background: #fcee21;
+  background: linear-gradient(135deg, #fcee21 0%, #009245 100%);
+}
+
+.pricing .price-container .premium {
+  background: #ed1e79;
+  background: -webkit-gradient(linear, left top, right bottom, from(#ed1e79), to(#662d8c));
+  background: linear-gradient(to right bottom, #ed1e79 0%, #662d8c 100%);
+}
+
+/** contact **/
+.contact {
+  /** inputs **/
+}
+
+.contact .title {
+  padding: 8%;
+  text-align: center;
+  background-image: url("https://images.unsplash.com/photo-1515062190079-4650ca1f7668?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80");
+}
+
+.contact .contact-container {
+  padding: 4%;
+  /** general input settings **/
+  /** name **/
+  /** first name **/
+  /** last name **/
+}
+
+.contact .contact-container .input {
+  padding: 10px 5px;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+  border: none;
+  border-bottom: 3px solid #160f30;
+  font-family: "Montserrat", sans-serif;
+}
+
+.contact .contact-container .input::-webkit-input-placeholder {
+  font-family: "Montserrat", sans-serif;
+}
+
+.contact .contact-container .input:-ms-input-placeholder {
+  font-family: "Montserrat", sans-serif;
+}
+
+.contact .contact-container .input::-ms-input-placeholder {
+  font-family: "Montserrat", sans-serif;
+}
+
+.contact .contact-container .input::placeholder {
+  font-family: "Montserrat", sans-serif;
+}
+
+.contact .contact-container .input:focus {
+  border-bottom: 3px solid #323edd;
+}
+
+.contact .contact-container .name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media only screen and (max-width: 480px) {
+  .contact .contact-container .name {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.contact .contact-container .first {
+  margin-right: 10px;
+}
+
+.contact .contact-container .last {
+  margin-left: 10px;
+}
+
+@media only screen and (max-width: 480px) {
+  .contact .contact-container .last {
+    margin-left: 0;
+  }
+}
+
+/** footer **/
+.footer {
+  background-color: #e6e6e6;
+  padding: 4%;
+}
+
+.footer .footer-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /** brand **/
+  /** page link **/
+}
+
+@media only screen and (max-width: 592px) {
+  .footer .footer-links {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.footer .footer-links .footer-brand a {
+  color: #160f30;
+  font-size: 2rem;
+}
+
+.footer .footer-links .footer-brand a span {
+  color: #323edd;
+}
+
+@media only screen and (max-width: 592px) {
+  .footer .footer-links .footer-brand {
+    margin-bottom: 20px;
+  }
+}
+
+.footer .footer-links .footer-link a {
+  color: #160f30;
+  margin: 0 10px;
+  font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 592px) {
+  .footer .footer-links .footer-link {
+    margin-bottom: 20px;
+  }
+}
+
+.footer .footer-links .footer-page-links a {
+  color: #160f30;
+  margin: 0 10px;
 }
 /*# sourceMappingURL=main.css.map */
