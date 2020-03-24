@@ -35,19 +35,19 @@ body,
     }
 }
 
-/** services **/ 
+/** services **/
 .services {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 4%;
+    padding: 8% 4%;
     position: relative;
     @extend %bg-position;
     background-image: url('https://images.unsplash.com/photo-1535432427690-545ed8124869?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');
     z-index: 1;
 
-    /** overlay **/ 
+    /** overlay **/
     &::after {
         position: absolute;
         content: '';
@@ -66,6 +66,122 @@ body,
 
         @media (max-width: $tablet) {
             padding: 4%;
+        }
+    }
+}
+
+/** our services **/
+.our-services {
+    padding: 4%;
+
+    .services-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: minmax(200px, 400px);
+        grid-gap: 20px;
+        cursor: pointer;
+        overflow-y: hidden;
+
+        /** change view **/ 
+        @media only screen and (max-width: 1007px) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-auto-rows: minmax(200px, 400px);
+            grid-gap: 20px;
+        }
+
+        /** change view **/ 
+        @media only screen and (max-width: $mobile) {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-auto-rows: minmax(200px, 400px);
+            grid-gap: 20px;
+        }
+
+        .service {
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+
+            &:hover {
+
+                a {
+                    display: inline-block;
+                }
+                
+                img {
+                    height: 115%;
+                }
+
+                h3 {
+                    @extend %transition;
+                    bottom: 0;
+                }
+
+                &::before {
+                    display: inline;
+                }
+            }
+
+            /** links **/ 
+            a {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 3;
+                font-size: 2.3rem;
+                background-color: $main;
+                line-height: .3;
+                padding: 10px;
+                border-radius: 50%;
+                display: none;
+
+                &:hover {
+                    color: $light;
+                }
+            }
+
+            /** title **/ 
+            h3 {
+                padding: 10px 20px;
+                background-color: transparentize($light, .2);
+                position: absolute;
+                bottom: -50%;
+                left: 0;
+                right: 0;
+                width: 100%;
+                z-index: 3;
+                color: $dark;
+            }
+
+            /** make the box responsive **/ 
+            &::after {
+                content: "";
+                display: block;
+                padding-bottom: 100%;
+            }
+
+            /** overlay **/ 
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                background-color: $dark;
+                z-index: 1;
+                opacity: .2;
+                display: none;
+                @extend %transition;
+            }
+
+            /** image **/
+            img {
+                height: 100%;
+                transition: .4s;
+            }
         }
     }
 }

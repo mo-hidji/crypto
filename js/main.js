@@ -23,10 +23,12 @@ function mainHeader() {
 
 function closeMenu() {
     document.getElementById('mobile').style.transform= "translateX(100%)";
+    document.getElementById('mobile').style.opacity="0";
 }
 
 function openMenu() {
     document.getElementById('mobile').style.transform= "translateX(0%)";
+    document.getElementById('mobile').style.opacity="1";
 };
 
 // slider
@@ -43,4 +45,8 @@ $('.partners').slick({
     pauseOnFocus: false,
     autoplaySpeed: 1000
 });
+})
+
+$(function() {
+    AOS.init();
 })
