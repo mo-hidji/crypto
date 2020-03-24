@@ -22,13 +22,18 @@ function mainHeader() {
 //close and open btn
 
 function closeMenu() {
-    document.getElementById('mobile').style.transform= "translateX(100%)";
+    document.getElementById('mobile').style.transform= "translateX(-100%)";
     document.getElementById('mobile').style.opacity="0";
+    document.getElementById('overlay').style.transform="translateX(-100%)";
+    document.getElementById('overlay').style.borderRadius="0 100% 100% 0";
 }
 
 function openMenu() {
     document.getElementById('mobile').style.transform= "translateX(0%)";
     document.getElementById('mobile').style.opacity="1";
+    document.getElementById('overlay').style.transform="translateX(0%)";
+    document.getElementById('overlay').style.borderRadius="0";
+
 };
 
 // parners slider
@@ -53,7 +58,8 @@ $('.sliders').slick({
     dots: true,
     arrows: false,
     infinite: false,
-    speed: 700,
+    speed: 3300,
+    autoplaySpeed: 800,
     autoplay: true,
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -93,3 +99,15 @@ $('.sliders').slick({
 $(function() {
     AOS.init();
 })
+
+// active class 
+// Add active class to the current button (highlight it)
+var header = document.getElementById("menu-nav");
+var btns = header.getElementsByClassName("btn-menu");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+  var current = document.getElementsByClassName("active");
+  current[0].className = current[0].className.replace(" active", "");
+  this.className += " active";
+  });
+}

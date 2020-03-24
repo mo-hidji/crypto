@@ -55,15 +55,15 @@
             <a href="index.html" class="brand">Crypto<span>.</span></a>
 
             <!--menu-->
-            <div class="menu">
-                <a href="index.html">Home</a>
-                <a href="#Service">Services</a>
-                <a href="#projects">Projects</a>
-                <a href="#">Shop</a>
-                <a href="#">Prices</a>
-                <a href="#">Blog</a>
-                <a href="#">Contact</a>
-                <a href="#">Privacy</a>
+            <div class="menu" id="menu-nav">
+                <a class="btn-menu active" href="index.html">Home</a>
+                <a class="btn-menu" href="#Service">Services</a>
+                <a class="btn-menu" href="#projects">Projects</a>
+                <a class="btn-menu" href="#">Shop</a>
+                <a class="btn-menu" href="#">Prices</a>
+                <a class="btn-menu" href="#">Blog</a>
+                <a class="btn-menu" href="#">Contact</a>
+                <a class="btn-menu" href="#">Privacy</a>
                 <button class="toggle" onclick="openMenu()">
                     <i class="fas fa-bars"></i>
                 </button>
@@ -81,17 +81,24 @@
             </div>
 
             <!--menu-->
-            <div class="menu">
-                <a href="index.html">Home</a>
-                <a href="#Service">Services</a>
-                <a href="#projects">Projects</a>
-                <a href="#">Shop</a>
-                <a href="#">Prices</a>
-                <a href="#">Blog</a>
-                <a href="#">Contact</a>
-                <a href="#">Privacy</a>
+            <div class="menu" id="mainMobile">
+                <a class="btn-menu-m" href="index.html">Home</a>
+                <a class="btn-menu-m" href="#Service">Services</a>
+                <a class="btn-menu-m" href="#projects">Projects</a>
+                <a class="btn-menu-m" href="#">Shop</a>
+                <a class="btn-menu-m" href="#">Prices</a>
+                <a class="btn-menu-m" href="#">Blog</a>
+                <a class="btn-menu-m" href="#">Contact</a>
+                <a class="btn-menu-m" href="#">Privacy</a>
             </div>
         </div>
+
+        <!-- mobile menu overlay -->
+        <div class="m-overlay" id="overlay">
+
+        </div>
+
+
         <!-- mobile header -->
         <div class="mobile-header" id="mobileHeaderX">
             <a href="index.html" class="brand">Crypto<span>.</span></a>
@@ -312,7 +319,7 @@
                     </div>
                 </div>
             </div>
-            <div class="side side3">
+            <div class="side side4">
                 <div class="project pr7" data-aos="fade-up">
                     <div class="p-links">
                         <div class="link">
