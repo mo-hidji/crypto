@@ -74,6 +74,41 @@ p {
     line-height: 1.5;
 }
 
+/** slick **/ 
+ul.slick-dots {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    bottom: -.8%;
+    transform: translateX(-50%);
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    transition: .1s ease;
+
+    button {
+        margin: 5px;
+        text-indent: -99999;
+        height: .5rem;
+        width: .5rem;
+        font-size: 1px;
+        background-color: $light;
+        border-radius: 50%;
+        border: none;
+    }
+}
+
+/** slick active **/
+li.slick-active {
+    button {
+        transition: .1s ease;
+        height: .5rem;
+        width: 1.5rem;
+        border-radius: 5px !important;
+        background-color: $main;
+    }
+}
+
 /*** fixed navbar ***/
 .fixed {
     position: fixed;
@@ -111,11 +146,9 @@ p {
     }
 
     /** hamburger **/
-    .toggler {
         .toggle {
             color: $dark !important;
         }
-    }
 }
 
 /** tag **/
